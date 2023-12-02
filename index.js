@@ -30,10 +30,11 @@ function handleDelete(req, res) {
     res.send("This is a DELETE request!");
 }
 
-app.get('/handlesum', handleFirstRequest);
-app.post('/handlepost', handlepost);
-app.put('/handleput', handlePut);
-app.delete('/handledelete', handleDelete);
+app.get('/handlesum', handleFirstRequest)
+app.post('/handlepost', handlepost)
+app.put('/handleput', handlePut)
+app.delete('/handledelete', handleDelete)
+app.get('/:username', handleFirstRequest)  //any name in the route will call the function
 
 function started() {
     console.log(`Example app listening on port ${port}`);
