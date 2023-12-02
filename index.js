@@ -14,7 +14,8 @@ function calsum(counter){
 
 
 function handleFirstRequest(req, res){
-    var caltdsum = calsum(100);
+    var counter = req.query.counter;   //to pass the input as QeuryParam(localhost:3000/route?counter=1000)
+    var caltdsum = calsum(counter);
     console.log(caltdsum)
     var answer = "the sum is " + caltdsum;
     res.send(answer);
